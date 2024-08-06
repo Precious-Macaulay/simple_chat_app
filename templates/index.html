@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fina</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1>Fina</h1>
+    <p>Ask me anything about your Personal Finance!</p>
+    <div class="powered-by">
+        Powered by
+        <select id="modelSelect">
+            <option>Llama 3 (via Groq.com)</option>
+        </select>
+    </div>
+    <div class="grid" id="questionsGrid">
+        <div class="grid-item">How much did I spend on groceries and dining out last month from all my accounts?</div>
+        <div class="grid-item">What was the total amount deposited into my accounts this past month?</div>
+        <div class="grid-item">What were my total expenses last month across all my accounts?</div>
+        <div class="grid-item">How much did I save last month from my different bank accounts?</div>
+    </div>
+
+
+
+            <div class="input-container">
+                <input type="text" id="questionInput"
+                    placeholder="What was my income in the past month across my banks?">
+                <button id="askButton" class="ask-button">Ask</button>
+            </div>
+        
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
